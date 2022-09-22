@@ -1,0 +1,6 @@
+RewriteEngine On
+RewriteCond %{index.php} !-f
+RewriteRule ^view-sessions/([0-9-]*)$ view-sessions.php?class_id=$1& [NC,L]
+RewriteRule ^class-students/([0-9-]*)$ class-students.php?class_id=$1& [NC,L]
+
+RewriteRule ^([^\.]+)$ $1.php [NC,L]

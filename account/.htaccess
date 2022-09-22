@@ -1,0 +1,6 @@
+RewriteEngine On
+RewriteCond %{index.php} !-f
+
+RewriteRule ^my-classes/([0-9-]*)$ my-classes.php?class_id=$1& [NC,L]
+
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
